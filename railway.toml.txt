@@ -1,0 +1,24 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "python APP.py"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+```
+
+### **خطوات التنفيذ:**
+
+1. **افتح مشروعك على GitHub**
+2. **اضغط على "Add file" > "Create new file"**
+3. **اكتب اسم الملف**: `Procfile` أو `railway.toml`
+4. **الصق المحتوى المناسب**
+5. **احفظ التغييرات (Commit)**
+6. **سيبدأ Railway تلقائياً في إعادة النشر**
+
+### **ملاحظة مهمة:**
+
+تأكد أيضاً من أن ملف `requirements.txt` يحتوي على جميع المكتبات المطلوبة. إذا كنت تستخدم Flask، تأكد من إضافة:
+```
+Flask
+gunicorn
